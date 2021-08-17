@@ -32,7 +32,7 @@ class Beaver:
                     self.rooms[self.move(False, -1)] is False and
                     self.rooms[self.move(False, 1)] is False
             ):
-                self.state = self.finish()
+                self.state = self.finish
                 return "Ok, only this room is lit now."
                 
             self.rooms[self.position] = False
