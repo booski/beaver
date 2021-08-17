@@ -24,9 +24,9 @@ In both cases, 0 is interpreted as False, anything else as True.
 ### When imported
 
 ```python3
-import busy
+from busy import Beaver
 
-beaver = busy.Beaver([True, False, True, True])
+beaver = Beaver([True, False, True, True])
 for (step, position, rooms, result) in beaver.release():
     state = ''.join([str(int(i)) for i in rooms])
     pointer = "^".rjust(len(str(step)) + 3 + position)
