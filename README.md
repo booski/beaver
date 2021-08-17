@@ -12,7 +12,7 @@ moves randomly one unit forwards or backwards in the list.
 
 ### When run directly (```python3 beaver.py ...``` etc.)
 
-```beaver.py <size> [<initial>] | <bool> <bool> <bool> ...```
+```beaver.py <length> [<initial>] | <bool> <bool> <bool> ...```
 
  * When run with less than three arguments, the first argument is the length of the list of "rooms".
 
