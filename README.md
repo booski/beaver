@@ -9,9 +9,9 @@ It traverses a list of boolean values, each representing a light in a room.
  
 ## Usage
 
-### When run directly (```python3 beaver.py...``` etc.)
+### When run directly (```python3 beaver.py ...``` etc.)
 
-```beaver.py <size> [<initial>] | <bool> <bool> <bool>...```
+```beaver.py <size> [<initial>] | <bool> <bool> <bool> ...```
 
  * When run with less than three arguments, the first argument is the length of the list of "rooms".
 
