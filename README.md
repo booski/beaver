@@ -1,7 +1,8 @@
 # busy.py - a busy beaver
 
 A busy beaver implemented in python.
-It traverses a list of boolean values, each representing a light in a room.
+It traverses a circular list of boolean values, each representing a light in a room. Each step, the beaver 
+moves randomly one unit forwards or backwards in the list.
 
  * If it encounters a dark room, it starts turning on lights
  * If it encounters a lit room, it starts turning off lights
@@ -9,9 +10,9 @@ It traverses a list of boolean values, each representing a light in a room.
  
 ## Usage
 
-### When run directly (```python3 beaver.py...``` etc.)
+### When run directly (```python3 beaver.py ...``` etc.)
 
-```beaver.py <size> [<initial>] | <bool> <bool> <bool>...```
+```beaver.py <length> [<initial>] | <bool> <bool> <bool> ...```
 
  * When run with less than three arguments, the first argument is the length of the list of "rooms".
 
