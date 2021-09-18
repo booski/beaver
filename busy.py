@@ -13,11 +13,11 @@ class Beaver:
     def __init__(self, rooms):
         self.state = self.conserve
         self.rooms = rooms
-        self.position = 0
+        self.position = int(len(rooms)/2)
         self.done = False
         
     def scared(self):
-        self.move()
+        self.move(dir=1)
         if self.rooms[self.position] is False:
             self.rooms[self.position] = True
             return "Turned on the light."
@@ -26,7 +26,7 @@ class Beaver:
             return "Turning off lights to conserve energy."
 
     def conserve(self):
-        self.move()
+        self.move(dir=1)
         if self.rooms[self.position] is True:
             if (
                     self.rooms[self.move(False, -1)] is False and
@@ -72,15 +72,22 @@ if __name__ == '__main__':
     try:
         length = len(sys.argv)
         if length == 2:
+            # One argument:
+            #  number of rooms
             size = int(sys.argv[1])
             rooms = [choice([True, False]) for i in range(size)]
         elif length == 3:
+            # Two arguments:
+            #  number of rooms
+            #  initial state
             size = int(sys.argv[1])
             rooms = [bool(int(sys.argv[2])) for i in range(size)]
         elif length > 3:
+            # More than two arguments:
+            #  list of initial states
             rooms = [bool(int(i)) for i in sys.argv[1:]]
     except Exception as e:
-        print("Usage: "+sys.argv[0]+" <int> | <bool> <bool> ...")
+        print("Usage: "+sys.argv[0]+" <int> | <int> <bool> | <bool> <bool> ...")
         exit(1)
     beaver = Beaver(rooms)
     try:
